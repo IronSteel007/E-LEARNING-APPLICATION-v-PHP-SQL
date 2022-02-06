@@ -1,0 +1,42 @@
+[
+
+    {
+
+        "Name": "Kouzbour",
+        "Payment_Shedule": "Kouzbour",
+        "Bill_Number": "123456",
+        "Amount_Paid": "DHS 1000,000",
+        "Balance_Amount": "DHS 5000,000",
+        "Date": "15/01/2022"
+
+    },
+    {
+
+        "Name": "Kouzbour",
+        "Payment_Shedule": "Kouzbour",
+        "Bill_Number": "123456",
+        "Amount_Paid": "DHS 1000,000",
+        "Balance_Amount": "DHS 5000,000",
+        "Date": "15/01/2022"
+
+    },
+    {
+
+        "Name": "Kouzbour",
+        "Payment_Shedule": "Kouzbour",
+        "Bill_Number": "123456",
+        "Amount_Paid": "DHS 1000,000",
+        "Balance_Amount": "DHS 5000,000",
+        "Date": "15/01/2022"
+
+    },
+    {
+
+        "Name": "Kouzbour",
+        "Payment_Shedule": "Kouzbour",
+        "Bill_Number": "123456",
+        "Amount_Paid": "DHS 1000,000",
+        "Balance_Amount": "DHS 5000,000",
+        "Date": "15/01/2022"
+    }
+]
