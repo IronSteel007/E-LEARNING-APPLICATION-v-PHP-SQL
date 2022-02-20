@@ -10,7 +10,7 @@
     <link rel="icon" href="assets/img/icone.ico" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
@@ -23,10 +23,13 @@
             <div class="">
                 <div class="d-flex justify-content-center">
                     <div class="col-md-4 shadow rounded-3 col-sm-12 p-4 bg-light bor-red">
-                        <div class="text-start">
+                        <div class="text-start d-flex justify-content-between">
                             <h2 class="border-start e-c">
                                 E-Classe
                             </h2>
+                            <a href = "signup.php"class="btn btn-success text-center mt-2 w-10 ">
+                                    Sign-up
+                                </a>
                         </div>
                         <div class="text-center">
                             <h4 class="text-uppercase">Sign In</h4>

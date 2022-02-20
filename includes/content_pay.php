@@ -1,4 +1,21 @@
+<?php
+    include '../crud/conection.php';
 
+    function select(){
+        global $conn;
+    
+        if($conn){
+            $query='SELECT *FROM payment';
+            $statement = $conn -> prepare($query);
+    
+            $statement-> execute();
+    
+            return $statement->fetchAll();
+        }
+    }
+    $tabb=[];
+    $tabb=select();
+    ?>
 
     <div class="row mt-5 flex-row">
         <div class="title col-lg-4 col-md-6 col-sm-12">
@@ -25,9 +42,23 @@
                 </tr>
             </thead>
             <tbody>
-                <?php
-                    include '../includes/tab_pay.php';
-                ?>
+           
+
+
+                        <tr>
+
+                        <?php foreach ($tabb as $tabb) :?>  
+
+                        <td><?php echo $tabb["name"]?></td>
+                        <td><?php echo $tabb['payment_shedule']?></td>
+                        <td><?php echo $tabb['bill_number']?></td>
+                        <td><?php echo $tabb['amount_paid']?></td>
+                        <td><?php echo $tabb['balance_amount']?></td>
+                        <td><?php echo $tabb['Date']?></td>
+                        <td><i class="far fa-eye text-primary"></i></td>
+                        </tr>
+                        <?php endforeach?>
+
             </tbody>
         </table>
     </div>

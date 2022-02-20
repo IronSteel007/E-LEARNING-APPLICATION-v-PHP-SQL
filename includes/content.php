@@ -1,6 +1,20 @@
 <?php
+   include '../crud/conection.php';
 
-echo<<<'EOT'
+   $students=$conn->prepare('SELECT COUNT(*) as number  FROM student');
+   $students->execute();
+   $nStudents= $students->fetch(PDO::FETCH_ASSOC);
+   $coursees=$conn->prepare('SELECT COUNT(*) as numberc  FROM courses');
+   $coursees->execute();
+   $nCourses= $coursees->fetch(PDO::FETCH_ASSOC);
+   $payment=$conn->prepare('SELECT SUM(amount_paid) as totalP FROM payment');
+   $payment->execute();
+   $tpayment= $payment->fetch(PDO::FETCH_ASSOC);
+
+
+
+?>
+
 <div class="row mt-2">
                     <div class="col-sm-6 col-md-3">
                         <div class="card" style="font-size: 1.5rem; background-color: #F0F9FF
@@ -9,7 +23,10 @@ echo<<<'EOT'
                                 <i class="fas fa-graduation-cap fa-lg"></i>
                                 <p class="text-muted fa-sm">Students</p>
                                 <p class="fa-sm d-flex justify-content-end text-dark fw-bolder">
-                                    243
+                                    <?php
+                                        echo $nStudents ['number'];
+                                    
+                                    ?>
                                 </p>
                             </div>
                         </div>
@@ -21,7 +38,10 @@ echo<<<'EOT'
                                 <i class="far fa-bookmark fa-lg"></i>
                                 <p class="text-muted fa-sm">Course</p>
                                 <p class="fa-sm d-flex justify-content-end text-dark fw-bolder">
-                                    13
+                                <?php  
+                                        echo $nCourses ['numberc'];
+                                    
+                                    ?>
                                 </p>
                             </div>
                         </div>
@@ -33,7 +53,10 @@ echo<<<'EOT'
                                 <i class="fas fa-dollar-sign fa-lg"></i>
                                 <p class="text-muted fa-sm">Payements</p>
                                 <p class="fa-sm d-flex justify-content-end text-dark fw-bolder">
-                                    Dhs 556,00
+                                <?php  
+                                        echo $tpayment ['totalP'];
+                                    
+                                    ?>
                                 </p>
                             </div>
                         </div>
@@ -53,8 +76,3 @@ echo<<<'EOT'
 
                 </div>
 
-
-
-EOT;
-
-?>

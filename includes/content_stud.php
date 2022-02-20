@@ -1,4 +1,9 @@
+<?php
+    include '../crud/select.php';
+    $tabb=[];
+    $tabb=select();
 
+?>
     <div class="row mt-5 flex-row">
         <div class="title col-lg-4 col-md-6 col-sm-12">
             <h2>Students List</h2>
@@ -8,7 +13,7 @@
                 <i class="fas fa-sort text-primary"></i>
             </div>
             <div>
-                <a href="#" class="btn btn-primary text-uppercase">add new student</a>
+                <a href="../view/form.php" class="btn btn-primary text-uppercase">add new student</a>
             </div>
         </div>
         <hr>
@@ -27,10 +32,23 @@
                 </tr>
             </thead>
             <tbody class="flex-column gap-2">
+                <tr class="mt-2">
+            <?php foreach ($tabb as $tabb) :?>
 
-                <?php
-                    include '../includes/tab_stud.php';
-                ?>
+                <th scope="row">
+                    <img src="../assets/img/profile.png" alt="Pro-img" width="65" height="55">
+                </th>
+                <td class="align-middle"><?php echo $tabb["name"]?></td>
+                <td class="align-middle"><?php echo $tabb["email"]?></td>
+                <td class="align-middle"><?php echo $tabb["phone"]?></td>
+                <td class="align-middle"><?php echo $tabb["enroll_number"]?></td>
+                <td class="align-middle"><?php echo $tabb["date_of_admission"]?></td>
+                <td class="text-primary align-middle">
+                    <a href="../crud/update.php?id=<?php echo $tabb['id']?>" class=""><i class="fas fa-pen pe-3 btn btn-info "></i></a>
+                   <a href="../crud/delete.php?id=<?php echo $tabb['id']?>" class=""><i class="fas fa-trash btn btn-danger"></i></a>
+                </td>
+                </tr>
+                <?php endforeach?>
 
             </tbody>
         </table>

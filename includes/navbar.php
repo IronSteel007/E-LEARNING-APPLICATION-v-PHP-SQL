@@ -3,7 +3,7 @@
 echo<<<'EOT'
 <div class="d-flex justify-content-between mt-3">
 <div class="">
-    <span style="font-size:30px;cursor:pointer">&#9776;</span>
+    <a id="oke" style="font-size:30px;cursor:pointer">&#9776;</a>
     <a href="/index.php"><i class="far fa-arrow-alt-circle-left text-muted"></i></a>
 </div>
 <div class="d-flex justify-content-between align-items-center gap-3">

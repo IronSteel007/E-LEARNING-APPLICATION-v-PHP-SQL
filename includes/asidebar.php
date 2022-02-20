@@ -21,7 +21,7 @@ echo<<<'EOT'
                             <a class="nav-link active btn text-center " href="home.php"><i class="fas fa-home text-dark col-2 "></i>Home</a>
                         </li>
                         <li class="nav-item cool-w mt-2">
-                            <a class="nav-link active btn text-center " href="#"><i class="far fa-bookmark text-dark col-2"></i>Course</a>
+                            <a class="nav-link active btn text-center " href="courses.php"><i class="far fa-bookmark text-dark col-2"></i>Course</a>
                         </li>
                         <li class="nav-item cool-w mt-2">
                             <a class="nav-link active btn text-center" href="student.php"><i class="fas fa-graduation-cap text-dark col-2"></i>Students</a>
