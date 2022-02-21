@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,19 +37,25 @@
                             <p class="h6">
                                 Enter your credentials to access your account
                             </p>
+                    <?php if (isset($_GET['error'])){
+                           ?>
                         </div>
-                        <form action="./view/home.php">
+                        <div class="alert alert-danger" >
+                          <?php echo $_GET['error']; ?>
+                        </div>
+                    <?php }; ?>
+                        <form action="./includes/ses_cko.php" method="POST">
                             <div class="p-4">
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="text" class="form-control" placeholder="Enter your email">
+                                    <input type="email" id="email" class="form-control" name="email" placeholder="Enter your email" value="<?php  if(isset($_COOKIE['user'])) echo $_COOKIE['user']?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Password</label>
-                                    <input type="password" class="form-control" placeholder="Enter your password">
+                                    <input type="password" id="password" class="form-control" name="pass" placeholder="Enter your password" value="<?php  if(isset($_COOKIE['user_pass'])) echo $_COOKIE['user_pass']?>">
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" name="check" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Remember Me
                                     </label>

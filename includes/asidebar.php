@@ -1,15 +1,16 @@
 <?php
+session_start();
+?>
 
-echo<<<'EOT'
 <div id="mySidenav" class="left sidenav">
                 <div class="p-3 mt-2">
-                    <h1 class="h3 e-c">E-Classe</h1>
+                    <h1 class="h3 e-c">E_Classes</h1>
                     <a href="javascript:void(0)" id="closebtn_" class="closebtn">&times;</a>
                 </div>
                 <div class="d-flex flex-column align-items-center mt-3">
                     <img class="rounded-circle avatar " src="../assets/img/avatar.jpeg" alt="avatar image" width="100" height="100">
                     <p class="mt-5 fa-lg">
-                        Kouzbour Yahya
+                        <?php echo $_SESSION['utilisateur_name'] ?>
                     </p>
                     <p class="text-primary">
                         Admin
@@ -41,7 +42,3 @@ echo<<<'EOT'
                     <a href="../index.php" class="btn nav-link btn marg-t">Logout <i class="fas fa-sign-out-alt text-dark"></i></a>
                 </div>
             </div>
-
-EOT;
-
-?>
