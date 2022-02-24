@@ -1,3 +1,7 @@
+<?php 
+session_start();
+if(isset($_SESSION['utilisateur_email'])){
+?>
 <?php
     include '../includes/header.php';
 ?>
@@ -20,4 +24,10 @@
 
 <?php
     include '../includes/footer.php';
+?>
+<?php
+    }
+    else{
+        header('location:../index.php');
+    }
 ?>

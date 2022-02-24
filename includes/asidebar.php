@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 
 <div id="mySidenav" class="left sidenav">
                 <div class="p-3 mt-2">
@@ -39,6 +37,6 @@ session_start();
                     </ul>
                 </nav>
                 <div class="d-flex justify-content-center  mt-5">
-                    <a href="../index.php" class="btn nav-link btn marg-t">Logout <i class="fas fa-sign-out-alt text-dark"></i></a>
+                    <a href="deconnexion.php"" class="btn nav-link btn marg-t">Logout <i class="fas fa-sign-out-alt text-dark"></i></a>
                 </div>
             </div>

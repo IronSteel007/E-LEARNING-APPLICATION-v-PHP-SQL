@@ -2,47 +2,21 @@
 const ROOT ='mysql:dbname=e_class_db;host=localhost;port=3306';
 const USERNAME ='root';
 const PASSWORD='';
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 $conn=new PDO(ROOT,USERNAME,PASSWORD);
 if($conn){
     echo 'work';
 }
-<<<<<<< Updated upstream
-
-
-function create($name_user,$email_user,$pass_user,$pass_confirmation){
-    global $conn;
-    if($conn){
-        $query= "INSERT INTO comptes(name_user,email_user,pass_user,pass_confirmation) values(:name_user,:email_user,:pass_user,:pass_confirmation)";
-=======
 function create($name_user,$email_user,$pass_user){
     global $conn;
     if($conn){
         $query= "INSERT INTO comptes(name_user,email_user,pass_user) values(:name_user,:email_user,:pass_user)";
->>>>>>> Stashed changes
         $statement=$conn->prepare($query);
 
     $statement->execute([
             ':name_user'=>$name_user,
             ':email_user'=>$email_user,
             ':pass_user'=>$pass_user,
-<<<<<<< Updated upstream
-            ':pass_confirmation'=>$pass_confirmation,
-            ]);
-    }
-    if($_POST['pass_user']===$_POST['pass_confirmation']){
-        
-    }
-}
-
-
-    if(isset($_POST['name_user']) && isset($_POST['email_user']) && isset($_POST['pass_user']) && isset($_POST['pass_confirmation'])){
-    if(!empty($_POST['name_user']) && !empty($_POST['email_user']) && !empty($_POST['pass_user']) && !empty($_POST['pass_confirmation'])){
-            create($_POST['name_user'],$_POST['email_user'],$_POST['pass_user'],$_POST['pass_confirmation']);
-=======
             ]);
             // validation password
     //  $number = preg_match('@[0-9]@', $password);
@@ -58,17 +32,11 @@ function create($name_user,$email_user,$pass_user){
     if(isset($_POST['name_user']) && isset($_POST['email_user']) && isset($_POST['pass']) && isset($_POST['pass_confirmation'])){
     if(!empty($_POST['name_user']) && !empty($_POST['email_user']) && !empty($_POST['pass']) ){
             create($_POST['name_user'],$_POST['email_user'],$_POST['pass'],$_POST['pass_confirmation']);
->>>>>>> Stashed changes
             header('Location:index.php');
         }
     }
     ?>
 
-<<<<<<< Updated upstream
-
-
-=======
->>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="en">
 
@@ -120,11 +88,7 @@ function create($name_user,$email_user,$pass_user){
                                 </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label">password</label>
-<<<<<<< Updated upstream
-                                    <input type="password" class="form-control" placeholder="Enter your password" name="pass_user">
-=======
                                     <input type="password" class="form-control" placeholder="Enter your password" name="pass">
->>>>>>> Stashed changes
                                 </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label">confirm Password</label>

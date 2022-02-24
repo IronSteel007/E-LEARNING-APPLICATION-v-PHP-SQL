@@ -21,14 +21,14 @@ else {
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     header('location:../index.php?error=invalid format email');
     }
-    
+
     else if ($email === $user_email && $password === $user_password){
      $_SESSION['utilisateur_name'] =  $user_name;
      $_SESSION['utilisateur_email'] = $user_email;
      $_SESSION['utilisateur_password'] = $user_password;
      if(isset($_POST['check'])){
-        setcookie('user',$_SESSION['user_email'],time()+(365*24*3600),"/");
-         setcookie('user_p',$_SESSION['user_password'],time()+(365*24*3600),"/");
+        setcookie('user',$user_email,time()+(20),"/");
+        setcookie('user_pass',$user_password,time()+(20),"/");
     }
     header('location:../view/home.php');
 

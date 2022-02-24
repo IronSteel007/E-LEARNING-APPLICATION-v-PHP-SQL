@@ -1,3 +1,7 @@
+<?php
+session_start();
+if(isset($_SESSION['utilisateur_email'])){
+?>
 
 <?php
     include '../crud/conection.php';
@@ -24,7 +28,6 @@ function create($name,$type,$price,$time){
             create($_POST['name_c'],$_POST['type_c'],$_POST['price_c'],$_POST['time_c']);
             header('location:courses.php');
         }
-      
       }
 ?>
 
@@ -35,7 +38,6 @@ function create($name,$type,$price,$time){
 
     <div class="d-flex vh-100 justify-content-center align-items-center body-colo">
         <div class="container-fluid divcont">
-            
                 <div class="d-flex justify-content-center">
                     <div class="col-md-4 shadow rounded-3 col-sm-12 p-4 bg-light bor-red">
                         <div class="text-start">
@@ -45,7 +47,6 @@ function create($name,$type,$price,$time){
                         </div>
                         <div class="text-center">
                             <h4 class="text-uppercase">add a new course </h4>
-                            
                         </div>
 
 
@@ -66,23 +67,27 @@ function create($name,$type,$price,$time){
                                 <div class="form-group mt-4">
                                     <input placeholder="time" type="number" name="time_c" required>
                                 </div>
-                            
                                 <div class="form-group mt-4">
                                     <button class="btn btn-primary" type="Submit" name="insert">insert</button>
                                 </div>
                                 </div>
                                 </div>
                             </form>
-                            
                         </div>
 
                     </div>
                 </div>
-            
         </div>
     </div>
 
 
 <?php
     include '../includes/footer.php';
+?>
+
+<?php
+    }
+    else{
+        header('location:../index.php');
+    }
 ?>

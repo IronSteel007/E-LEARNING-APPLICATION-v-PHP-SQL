@@ -48,11 +48,11 @@
                             <div class="p-4">
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" id="email" class="form-control" name="email" placeholder="Enter your email" value="<?php  if(isset($_COOKIE['user'])) echo $_COOKIE['user']?>">
+                                    <input type="email" id="email" class="form-control" name="email" placeholder="Enter your email" value="<?php if(isset($_COOKIE['user'])) {echo $_COOKIE['user'];}?>">
                                 </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Password</label>
-                                    <input type="password" id="password" class="form-control" name="pass" placeholder="Enter your password" value="<?php  if(isset($_COOKIE['user_pass'])) echo $_COOKIE['user_pass']?>">
+                                    <input type="password" id="password" class="form-control" name="pass" placeholder="Enter your password" value="<?php if(isset($_COOKIE['user_pass'])) {echo $_COOKIE['user_pass'];} ?>">
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="check" id="flexCheckDefault">
